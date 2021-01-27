@@ -33,13 +33,13 @@ h1 span{
 }
 h2{
     font-weight: 700;
-    font-size: 4rem;
+    font-size: calc(14vh * 0.45);
     color: #1f1f1f;
     padding-bottom: 10%;
 }
 h2 span{
     font-weight: 700;
-    font-size: 4rem;
+    font-size: 1em;
     color: #1D6EDB;
     padding-bottom: 10%;
 }
@@ -47,10 +47,8 @@ a {
     text-decoration: none;
 }
 .container{
-  padding: 0 50px;
-  max-width: 1280px;
+  padding: 0 5vw;
   width: 100%;
-  margin: auto;
 }
 
 /* Section header */
@@ -61,13 +59,21 @@ a {
 	top: 0;
 	width: 100vw;
     height: auto;
-    transition: background-color 300ms ease;
+}
+.header {
+	min-height: 8vh;
+	transition: background-color 300ms ease;
+}
+#header .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .nav-bar{
-    min-height: 8vh;
     display: flex;
 	align-items: center;
     justify-content: space-between;
+    width: 100%;
 }
 .nav-list{
     width: 30vw;
@@ -95,6 +101,8 @@ a {
     background-position: top center;
     display: flex;
     overflow: hidden;
+    align-items: center;
+    justify-content: center;
 }
 #hero::after{
     content: '';
@@ -147,7 +155,9 @@ a {
 #about{
     height: 100vh;
     display: flex;
-    align-content: center;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
 }
 .about-content{
     display: grid;
@@ -188,12 +198,12 @@ img{
     position: relative;
 }
 .img-container-copie{
-    max-height: 556x;
-    max-width: 445px;
+    max-height: 100%;
+    max-width: 100%;
     position: relative;
     z-index: 8;
     opacity: 0.15;
-    transform: rotate(-35deg) rotateY(180deg) translate(4vw) scale(0.9);
+    transform: rotate(-35deg) rotateY(180deg) translate(8vw, -5vh) scale(0.8);
 }
 img .copie{
     height: 100%;
@@ -209,8 +219,15 @@ img .copie{
 /* Fin Section about */
 
 /* Section project */
+#all-projects{
+    height: 330vh;
+}
 #projects{
     height: 100vh;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    overflow: visible;
 }
 .top-projects{
     margin-top: 12vh;
@@ -224,7 +241,7 @@ img .copie{
 .project-content{
     display: grid;
     gap: 4em;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30vh, 1fr));
     align-items: center;
 }
 .project-img{
@@ -232,6 +249,7 @@ img .copie{
 }
 .scale{
     transform: scale(0.6);
+    width: 34vw;
 }
 .img-clavier{
     width: 70vw;
@@ -309,23 +327,19 @@ img .copie{
 
 /* Contact Section */
 #contact{
-    height: 100vh;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    padding-bottom: 24vh;
 }
 .contact-content{
-    flex-direction: column;
-    margin: 0 auto;
-    max-width: 1200px;
-    padding: 100px 50px;
-	align-items: center;
-	justify-content: center;
-	min-width: 20vh;
-		
+    padding-top: 12vh;
 }
 .contact-items{
     width: 100%;
     display: grid;
     gap: 2em;
-	grid-template-columns: repeat(auto-fit, minmax(35vh, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(30vh, 1fr));
     margin-top: 20px;
 }
 .contact-item {
@@ -360,6 +374,9 @@ img .copie{
 /* Footer Section */
 #footer {
     background-image: linear-gradient(-10deg, #1D6EDB 0%, #000091 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .footer-content{
     flex-direction: column;
@@ -402,11 +419,127 @@ img .copie{
 
 /* mobile view */
 /* width a revoir */
-@media (max-width: 638px){
+@media (max-width: 768px){
+    #header{
+        overflow-x: visible;
+    }
+    .nav-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        max-width: 1200px;
+        padding: 0 10px;
+    }
+    .nav-list{
+        width: fit-content;
+    }
+    .nav-list ul {
+        position: absolute;
+        background-color: rgb(31, 30, 30);
+        width: 100vw;
+        height: 100vh;
+        left: 100%;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        overflow-x: hidden;
+        transition: .5s ease left;
+    }
+    .nav-list ul.active {
+        left: 0%;
+    }
+    .nav-list ul a {
+        font-size: 1.5rem;
+        font-weight: 500;
+        letter-spacing: .2rem;
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+        padding: 20px;
+        display: block;
+    }
+    .nav-list ul a::after {
+        content: attr(data-after);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        color: rgba(240, 248, 255, 0.021);
+        font-size: 13rem;
+        letter-spacing: 50px;
+        z-index: -1;
+        transition: .3s ease letter-spacing;
+    }
+    .nav-list ul li:hover a::after {
+        transform: translate(-50%, -50%) scale(1);
+        letter-spacing: initial;
+    }
+    .nav-list ul li:hover a {
+        color: crimson;
+    }
+    .hamburger {
+        height: 60px;
+        width: 60px;
+        display: inline-block;
+        border: 3px solid white;
+        border-radius: 50%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 100;
+        cursor: pointer;
+        transform: scale(.8);
+    }
+    .hamburger .bar {
+        height: 2px;
+        width: 30px;
+        position: relative;
+        background-color: white;
+        z-index: -1;
+    }
+    .hamburger .bar::after,
+    .hamburger .bar::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        background-color: white;
+        transition: .3s ease;
+        transition-property: top, bottom;
+    }
+    .hamburger .bar::after {
+        top: 8px;
+    }
+    .hamburger .bar::before {
+        bottom: 8px;
+    }
+    .hamburger.active .bar::before {
+        bottom: 0;
+    }
+    .hamburger.active .bar::after {
+        top: 0;
+    }
     .col-left{
         display: none;
     }
+}
+
+@media (max-width: 375px){
+    #about{
+        overflow: hidden;
+    }
     .img-container-copie{
-        transform: rotate(-35deg) rotateY(180deg) translate(4vw) scale(1.8);
+        transform: rotate(-35deg) rotateY(180deg) translatey(-10vh) scale(1.5);
     }
 }
+
+/* Keyframes */
+
+/* End Keyframes */
