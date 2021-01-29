@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
     <title>Portfolio</title>
 </head>
@@ -67,10 +68,12 @@
       <div class="project-content">
         <div class="project-img">
           <div class="img-clavier"><img src="./img/clavier.jpg" alt="coding"></div>
-          <div class="scale">
-            <div class="img-left"><img src="./img/sc-first1.png" alt="App First"></div>
-            <div class="img-right"><img src="./img/sc-first2.png" alt="App First"></div>
-            <div class="img-center"><img src="./img/sc-first3.png" alt="App First"></div>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide img-left"><img src="./img/sc-first1.png" alt="App First"></div>
+              <div class="swiper-slide img-right"><img src="./img/sc-first2.png" alt="App First"></div>
+              <div class="swiper-slide img-center"><img src="./img/sc-first3.png" alt="App First"></div>
+            </div>
           </div>
         </div>
         <div class="project-text">
@@ -81,16 +84,18 @@
   </section>
   <section id="projects" class="next reverse">
       <div class="project-content container">
-        <div class="project-text">
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus vel commodi magni necessitatibus temporibus delectus, consequuntur pariatur atque neque libero excepturi magnam recusandae rerum similique, qui quisquam saepe unde quas?</p>
-        </div>
         <div class="project-img">
           <div class="img-clavier"><img src="./img/clavier.jpg" alt="coding"></div>
-          <div class="scale">
-            <div class="img-left"><img src="./img/sc-todo1.png" alt="App Todo"></div>
-            <div class="img-right"><img src="./img/sc-todo2.png" alt="App Todo"></div>
-            <div class="img-center"><img src="./img/sc-todo3.png" alt="App Todo"></div>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide img-left"><img src="./img/sc-todo1.png" alt="App Todo"></div>
+              <div class="swiper-slide img-right"><img src="./img/sc-todo2.png" alt="App Todo"></div>
+              <div class="swiper-slide img-center"><img src="./img/sc-todo3.png" alt="App Todo"></div>
+            </div>
           </div>
+        </div>
+        <div class="project-text">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus vel commodi magni necessitatibus temporibus delectus, consequuntur pariatur atque neque libero excepturi magnam recusandae rerum similique, qui quisquam saepe unde quas?</p>
         </div>
       </div>
   </section>
@@ -98,10 +103,12 @@
     <div class="project-content container">
       <div class="project-img">
         <div class="img-clavier"><img src="./img/clavier.jpg" alt="coding"></div>
-        <div class="scale">
-          <div class="img-left img-big"><img src="./img/sc-recette1.jpg" alt="App Recipe"></div>
-          <div class="img-right img-big"><img src="./img/sc-recette2.jpg" alt="App Recipe"></div>
-          <div class="img-center img-big"><img src="./img/sc-recette3.jpg" alt="App Recipe"></div>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide img-left img-big"><img src="./img/sc-recette1.jpg" alt="App Recipe"></div>
+            <div class="swiper-slide img-right img-big"><img src="./img/sc-recette2.jpg" alt="App Recipe"></div>
+            <div class="swiper-slide img-center img-big"><img src="./img/sc-recette3.jpg" alt="App Recipe"></div>
+          </div>
         </div>
       </div>
       <div class="project-text">
@@ -165,5 +172,25 @@
   <!-- End footer section -->
     
   <script src="./app.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      loop: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 20,
+        stretch: 60,
+        depth: 400,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+  </script>
 </body>
 </html>
