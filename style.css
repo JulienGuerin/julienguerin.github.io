@@ -84,6 +84,7 @@ a h3{
 }
 .nav-list{
     width: fit-content;
+    width: -moz-fit-content;
 }
 .nav-list ul {
     position: absolute;
@@ -271,6 +272,7 @@ img .copie{
     position: absolute;
     z-index: 9;
     width: 85%;
+    padding-left: 6%;
 }
 /* Fin Section about */
 
@@ -310,7 +312,7 @@ img .copie{
     width: 100%;
 }
 .swiper-slide img{
-    width: 60%;
+    width: 80%;
 }
 .swiper-slide {
     background-position: center;
@@ -447,6 +449,7 @@ img .copie{
 		display: block;
 		height: auto;
 		width: fit-content;
+        width: -moz-fit-content;
 		background-color: transparent;
 	}
 	#header .nav-list ul li {
@@ -457,6 +460,7 @@ img .copie{
         text-transform: none;
         padding: 0 20px;
     }
+
 /* about section */
     .col-left{
         display: grid;
@@ -479,6 +483,9 @@ img .copie{
         background-color: #000091;
         opacity: .5;
         z-index: 11;
+    }
+    .text-container {
+        padding-left: 0;
     }
     .hero-text p{
         font-size: 1.5rem;

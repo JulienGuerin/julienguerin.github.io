@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="style.css">
   <title>Portfolio</title>
   <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
@@ -216,20 +216,21 @@
   <!-- End footer section -->
 
   <script src="./app.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <script>
     var swiper = new Swiper('.swiper-container', {
       effect: 'coverflow',
       grabCursor: true,
-      loop: true,
+      loop: false,
       centeredSlides: true,
-      slidesPerView: '1.63',
+      slidesPerView: '2',
+      initialSlide: 1,
       coverflowEffect: {
         rotate: 20,
         stretch: 40,
-        depth: 400,
+        depth: 600,
         modifier: 1,
-        slideShadows: true,
+        slideShadows: false,
       },
       pagination: {
         el: '.swiper-pagination',
