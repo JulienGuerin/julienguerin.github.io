@@ -1,22 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Portfolio</title>
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
 </head>
+
 <body>
-    <!-- header -->
+  <!-- header -->
   <section id="header">
     <div class="header container">
       <div class="nav-bar">
         <div class="brand">
-          <a href="#hero"><h1><span>J</span>ulien <span>G</span>uerin</h1></a>
+          <a href="#hero">
+            <h1><span>J</span>ulien <span>G</span>uerin</h1>
+          </a>
         </div>
         <div class="nav-list">
-          <div class="hamburger"><div class="bar"></div></div>
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
           <ul>
             <li><a href="#about" data-after="About">About</a></li>
             <li><a href="#all-projects" data-after="Projects">Projects</a></li>
@@ -26,26 +49,28 @@
       </div>
     </div>
   </section>
-    <!-- End header -->
-    
-    <!-- hero section -->
+  <!-- End header -->
+
+  <!-- hero section -->
   <section id="hero">
     <div class="hero-text container">
-        <p>Hello, I am<span id="color-reveal"></span></br>
-        <span>Mobile Flutter </span><span id="dev">Developer</span><span id="color-reveal"></span></br>&<span id="color-reveal"></span></br>
-        <span>Web Front End </span><span id="dev">Developer</span><span id="color-reveal"></span></p>
-        <a href="#contact" type="button" class="cta">Hire Me</a>
+      <p>Hello, I am<span id="color-reveal"></span></br>
+        <span>Mobile Flutter </span><span id="dev">Developer</span><span id="color-reveal"></span></br>&<span
+          id="color-reveal"></span></br>
+        <span>Web Front End </span><span id="dev">Developer</span><span id="color-reveal"></span>
+      </p>
+      <a href="#contact" type="button" class="cta">Hire Me</a>
     </div>
   </section>
-    <!-- End hero section -->
+  <!-- End hero section -->
 
-    <!-- about section -->
+  <!-- about section -->
   <section id="about">
     <div class="about-content container">
       <div class="col-left">
-          <div class="img-container">
-            <img src="./img/idea.jpg" alt="Creativity">
-          </div>
+        <div class="img-container">
+          <img src="./img/idea.jpg" alt="Creativity">
+        </div>
       </div>
       <div class="col-right">
         <div class="img-container-copie">
@@ -53,36 +78,44 @@
         </div>
         <div class="text-container">
           <h2>About <span>me</span></h2>
-          <p>I have one year of experience in mobile app development with flutter.</br>I focus on writing clean and efficient code.</br>To properly organize my projects and have better performance in state management, I use GetX.</br></br>In web development I work with HTML, CSS, Javascript and currently I am Learning WebGL to make smooth animations.</p>
-        </div>  
-      </div>
-    </div>
-</section>
-  <!-- End about section -->
-
-  <!-- project section -->
-<section id="all-projects">
-  <section id="projects" class="top-projects">
-    <div class="container">
-      <div class="project-title"><h2><span>My</span> projects</h2></div>
-      <div class="project-content">
-        <div class="project-img">
-          <div class="img-clavier"><img src="./img/clavier.jpg" alt="coding"></div>
-          <div class="swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide img-left"><img src="./img/sc-first1.png" alt="App First"></div>
-              <div class="swiper-slide img-right"><img src="./img/sc-first2.png" alt="App First"></div>
-              <div class="swiper-slide img-center"><img src="./img/sc-first3.png" alt="App First"></div>
-            </div>
-          </div>
-        </div>
-        <div class="project-text">
-          <p>I've created this app to make people rich. Users can play a game for free by watching an ad or pay to do not. They have two weeks to increase their score and then the ten best will earn money or game's coins.</br>You can find it <a href="https://play.google.com/store/apps/details?id=com.hooptech.first" target="_blank">here</a>.</p>
+          <p>I have one year of experience in mobile app development with flutter.</br>I focus on writing clean and
+            efficient code.</br>To properly organize my projects and have better performance in state management, I use
+            GetX.</br></br>In web development I work with HTML, CSS, Javascript and currently I am Learning WebGL to
+            make smooth animations.</p>
         </div>
       </div>
     </div>
   </section>
-  <section id="projects" class="next reverse">
+  <!-- End about section -->
+
+  <!-- project section -->
+  <section id="all-projects">
+    <section id="projects" class="top-projects">
+      <div class="container">
+        <div class="project-title">
+          <h2><span>My</span> projects</h2>
+        </div>
+        <div class="project-content">
+          <div class="project-img">
+            <div class="img-clavier"><img src="./img/clavier.jpg" alt="coding"></div>
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide img-left"><img src="./img/sc-first1.png" alt="App First"></div>
+                <div class="swiper-slide img-right"><img src="./img/sc-first2.png" alt="App First"></div>
+                <div class="swiper-slide img-center"><img src="./img/sc-first3.png" alt="App First"></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-text">
+            <p>I've created this app to make people rich. Users can play a game for free by watching an ad or pay to do
+              not. They have two weeks to increase their score and then the ten best will earn money or game's
+              coins.</br>You can find it <a href="https://play.google.com/store/apps/details?id=com.hooptech.first"
+                target="_blank">here</a>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projects" class="next reverse">
       <div class="project-content container">
         <div class="project-img">
           <div class="img-clavier"><img src="./img/clavier.jpg" alt="coding"></div>
@@ -95,84 +128,93 @@
           </div>
         </div>
         <div class="project-text">
-          <p>I made this app for myself. I wanted a notepad that I could organize by priorities and which doesn't share my data on servers. I also wanted a quick one-click overview of a task. So I designed and made my own, which you can see <a href="https://play.google.com/store/apps/details?id=com.hooptech.blocnote" target="_blank">here</a>.</p>
+          <p>I made this app for myself. I wanted a notepad that I could organize by priorities and which doesn't share
+            my data on servers. I also wanted a quick one-click overview of a task. So I designed and made my own, which
+            you can see <a href="https://play.google.com/store/apps/details?id=com.hooptech.blocnote"
+              target="_blank">here</a>.</p>
         </div>
       </div>
-  </section>
-  <section id="projects" class="next">
-    <div class="project-content container">
-      <div class="project-img">
-        <div class="img-clavier"><img src="./img/clavier.jpg" alt="coding"></div>
-        <div class="swiper-container">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide img-left img-big"><img src="./img/sc-recette1.jpg" alt="App Recipe"></div>
-            <div class="swiper-slide img-right img-big"><img src="./img/sc-recette2.jpg" alt="App Recipe"></div>
-            <div class="swiper-slide img-center img-big"><img src="./img/sc-recette3.jpg" alt="App Recipe"></div>
+    </section>
+    <section id="projects" class="next">
+      <div class="project-content container">
+        <div class="project-img">
+          <div class="img-clavier"><img src="./img/clavier.jpg" alt="coding"></div>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide img-left img-big"><img src="./img/sc-recette1.jpg" alt="App Recipe"></div>
+              <div class="swiper-slide img-right img-big"><img src="./img/sc-recette2.jpg" alt="App Recipe"></div>
+              <div class="swiper-slide img-center img-big"><img src="./img/sc-recette3.jpg" alt="App Recipe"></div>
+            </div>
           </div>
         </div>
+        <div class="project-text">
+          <p>I made this app to improve the search of recipes. My client has a lot of recipe cards in which it is very
+            difficult to find the recipe she's looking for.</br>But now with this app she can search for a recipe by
+            name and it gives her the right number to go to recipe cards.</p>
+        </div>
       </div>
-      <div class="project-text">
-        <p>I made this app to improve the search of recipes. My client has a lot of recipe cards in which it is very difficult to find the recipe she's looking for.</br>But now with this app she can search for a recipe by name and it gives her the right number to go to recipe cards.</p>
-      </div>
-    </div>
+    </section>
   </section>
-</section>
   <!-- End project section -->
 
   <!-- contact section -->
-<section id="contact">
-  <div class="contact-content container">
-    <div class="project-title"><h2>Contact <span>info</span></h1></div>
-    <div class="contact-items">
-      <div class="contact-item">
-        <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/phone.png"/></div>
-        <div class="contact-info">
-          <h2>Phone</h2>
-          <h3>+33 6 15 58 45 23</h3>
-        </div>
+  <section id="contact">
+    <div class="contact-content container">
+      <div class="project-title">
+        <h2>Contact <span>info</span></h1>
       </div>
-      <a href="mailto:ju_guerin@live.fr">
+      <div class="contact-items">
         <div class="contact-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/new-post.png"/></div>
+          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/phone.png" /></div>
           <div class="contact-info">
-            <h2>Email</h2>
-            <h3>ju_guerin@live.fr</h3>
+            <h2>Phone</h2>
+            <h3>+33 6 15 58 45 23</h3>
           </div>
         </div>
-      </a>
-      <div class="contact-item">
-        <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/map-marker.png"/></div>
-        <div class="contact-info">
-          <h2>Address</h2>
-          <h3>Orléans, France</h3>
+        <a href="mailto:ju_guerin@live.fr">
+          <div class="contact-item">
+            <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/new-post.png" /></div>
+            <div class="contact-info">
+              <h2>Email</h2>
+              <h3>ju_guerin@live.fr</h3>
+            </div>
+          </div>
+        </a>
+        <div class="contact-item">
+          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/map-marker.png" /></div>
+          <div class="contact-info">
+            <h2>Address</h2>
+            <h3>Orléans, France</h3>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
   <!-- End contact section -->
 
   <!-- footer section -->
-<section id="footer">
-  <div class="footer-content container">
-      <div class="brand"><h1><span>J</span>ulien <span>G</span>uerin</h1></div>
+  <section id="footer">
+    <div class="footer-content container">
+      <div class="brand">
+        <h1><span>J</span>ulien <span>G</span>uerin</h1>
+      </div>
       <h2>The developer you need</h2>
       <div class="social-icon">
         <div class="social-item">
-          <a href="#"><img src="https://img.icons8.com/color/96/000000/facebook.png"/></a>
+          <a href="#"><img src="https://img.icons8.com/color/96/000000/facebook.png" /></a>
         </div>
         <div class="social-item">
-          <a href="https://github.com/julienGuerin"><img src="https://img.icons8.com/fluent/96/000000/github.png"/></a>
+          <a href="https://github.com/julienGuerin"><img src="https://img.icons8.com/fluent/96/000000/github.png" /></a>
         </div>
         <div class="social-item">
-          <a href="#"><img src="https://img.icons8.com/fluent/96/000000/instagram-new.png"/></a>
+          <a href="#"><img src="https://img.icons8.com/fluent/96/000000/instagram-new.png" /></a>
         </div>
       </div>
       <p>Copyright © 2021 Julien. All rights reserved</p>
     </div>
-</section>
+  </section>
   <!-- End footer section -->
-    
+
   <script src="./app.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
@@ -195,4 +237,5 @@
     });
   </script>
 </body>
+
 </html>
