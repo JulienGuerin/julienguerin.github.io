@@ -8,7 +8,7 @@
 }
 html {
   scroll-behavior: smooth;
-  scroll-snap-type: y proximity;
+  /* scroll-snap-type: y proximity; */
 }
 body{
     font-family: 'Poppins';
@@ -18,8 +18,8 @@ body{
 }
 section{
     overflow-x: hidden;
-    scroll-snap-align: start;
-    scroll-snap-stop: normal;
+    /* scroll-snap-align: start;
+    scroll-snap-stop: normal; */
 }
 h1{
     font-weight: 700;
