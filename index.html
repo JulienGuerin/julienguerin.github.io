@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
   <link rel="stylesheet" href="style.css">
   <title class="notranslate">Portfolio</title>
   <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
@@ -90,70 +90,134 @@
 
   <!-- project section -->
   <section id="all-projects">
-    <section id="projects" class="top-projects">
-      <div class="container">
-        <div class="project-title">
-          <h2><span>My</span> projects</h2>
-        </div>
-        <div class="project-content">
-          <div class="project-img">
-            <div class="img-clavier"><img src="./img/clavier.jpg" alt="coding"></div>
-            <div class="swiper-container">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide img-left"><img src="./img/sc-first1.png" alt="App First"></div>
-                <div class="swiper-slide img-right"><img src="./img/sc-first2.png" alt="App First"></div>
-                <div class="swiper-slide img-center"><img src="./img/sc-first3.png" alt="App First"></div>
+    <div class="project-title container">
+      <h2><span>My</span> projects</h2>
+    </div>
+    <div class="project-tabs container">
+      <input type="radio" id="mobiletab" name="mytabs" checked="checked">
+      <label for="mobiletab" class="mobiletab">Mobile</label>
+      <div class="project-tab">
+        <section id="projects" class="top-projects">
+          <div class="container">
+            <div class="project-content">
+              <div class="project-img">
+                <div class="img-clavier"><img src="./img/clavier.jpg" alt="coding"></div>
+                <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide img-left"><img src="./img/sc-first1.png" alt="App First"></div>
+                    <div class="swiper-slide img-right"><img src="./img/sc-first2.png" alt="App First"></div>
+                    <div class="swiper-slide img-center"><img src="./img/sc-first3.png" alt="App First"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-text">
+                <h3>First</h3>
+                <p>I've created this app to make people rich. Users can play a game for free by watching an ad or pay to
+                  do
+                  not. They have two weeks to increase their score and then the ten best will earn money or game's
+                  coins.</br>You can find it <a href="https://play.google.com/store/apps/details?id=com.hooptech.first"
+                    target="_blank">here</a>.</p>
               </div>
             </div>
           </div>
-          <div class="project-text">
-            <p>I've created this app to make people rich. Users can play a game for free by watching an ad or pay to do
-              not. They have two weeks to increase their score and then the ten best will earn money or game's
-              coins.</br>You can find it <a href="https://play.google.com/store/apps/details?id=com.hooptech.first"
-                target="_blank">here</a>.</p>
+        </section>
+        <section id="projects" class="next reverse">
+          <div class="project-content container">
+            <div class="project-img">
+              <div class="img-clavier"><img src="./img/clavier.jpg" alt="coding"></div>
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide img-left"><img src="./img/sc-todo1.png" alt="App Todo"></div>
+                  <div class="swiper-slide img-right"><img src="./img/sc-todo2.png" alt="App Todo"></div>
+                  <div class="swiper-slide img-center"><img src="./img/sc-todo3.png" alt="App Todo"></div>
+                </div>
+              </div>
+            </div>
+            <div class="project-text">
+              <h3>Bloc Note</h3>
+              <p>I made this app for myself. I wanted a notepad that I could organize by priorities and which doesn't
+                share
+                my data on servers. I also wanted a quick one-click overview of a task. So I designed and made my own,
+                which
+                you can see <a href="https://play.google.com/store/apps/details?id=com.hooptech.blocnote"
+                  target="_blank">here</a>.</p>
+            </div>
           </div>
-        </div>
+        </section>
+        <section id="projects" class="next">
+          <div class="project-content container">
+            <div class="project-img">
+              <div class="img-clavier"><img src="./img/clavier.jpg" alt="coding"></div>
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide img-left img-big"><img src="./img/sc-recette1.jpg" alt="App Recipe"></div>
+                  <div class="swiper-slide img-right img-big"><img src="./img/sc-recette2.jpg" alt="App Recipe"></div>
+                  <div class="swiper-slide img-center img-big"><img src="./img/sc-recette3.jpg" alt="App Recipe"></div>
+                </div>
+              </div>
+            </div>
+            <div class="project-text">
+              <h3>Recettes</h3>
+              <p>I made this app to improve the search of recipes. My client has a lot of recipe cards in which it is
+                very
+                difficult to find the recipe she's looking for.</br>But now with this app she can search for a recipe by
+                name and it gives her the right number to go to recipe cards.</p>
+            </div>
+          </div>
+        </section>
       </div>
-    </section>
-    <section id="projects" class="next reverse">
-      <div class="project-content container">
-        <div class="project-img">
-          <div class="img-clavier"><img src="./img/clavier.jpg" alt="coding"></div>
-          <div class="swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide img-left"><img src="./img/sc-todo1.png" alt="App Todo"></div>
-              <div class="swiper-slide img-right"><img src="./img/sc-todo2.png" alt="App Todo"></div>
-              <div class="swiper-slide img-center"><img src="./img/sc-todo3.png" alt="App Todo"></div>
+      <input type="radio" id="webtab" name="mytabs">
+      <label for="webtab">Web</label>
+      <div class="project-tab">
+        <div class="webtab-img">
+          <div class="webtab-img-one">
+            <img src="/img/Mind7ting_Mockup2.jpg" alt="">
+            <div class="webtab-img-one-child">
+              <h3>Mind7ting</h3>
+              <div>
+                <p>Design <strong>creation</strong></p>
+                <p>Website <strong>development</strong></p>
+              </div>
+              <div>
+                <p>Technologies used :</p>
+                <div class="webtab-img-technos">
+                  <img src="https://img.icons8.com/color/96/000000/adobe-xd--v1.png"/>
+                  <img src="https://img.icons8.com/color/96/000000/html-5--v1.png"/>
+                  <img src="https://img.icons8.com/color/96/000000/css3.png"/>
+                  <img src="https://img.icons8.com/color/96/000000/javascript--v1.png"/>
+                </div>
+              </div>
+              <div class="link-to-site">
+                <a href="#" type="button">Click to view</a>
+              </div>
+            </div>
+          </div>
+          <div class="webtab-img-one">
+            <img src="/img/central-parts.jpg" alt="">
+            <div class="webtab-img-one-child">
+              <h3>Central Parts</h3>
+              <div>
+                <p>Design <strong>creation</strong></p>
+                <p>Website <strong>development</strong></p>
+              </div>
+              <div>
+                <p>Technologies used :</p>
+                <div class="webtab-img-technos">
+                  <img src="https://img.icons8.com/color/96/000000/adobe-xd--v1.png"/>
+                  <img src="https://img.icons8.com/color/96/000000/html-5--v1.png"/>
+                  <img src="https://img.icons8.com/color/96/000000/css3.png"/>
+                  <img src="https://img.icons8.com/color/96/000000/javascript--v1.png"/>
+                  <img src="https://img.icons8.com/color/96/000000/wordpress.png"/>
+                </div>
+              </div>
+              <div class="link-to-site">
+                <a href="#" type="button">Click to view</a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="project-text">
-          <p>I made this app for myself. I wanted a notepad that I could organize by priorities and which doesn't share
-            my data on servers. I also wanted a quick one-click overview of a task. So I designed and made my own, which
-            you can see <a href="https://play.google.com/store/apps/details?id=com.hooptech.blocnote"
-              target="_blank">here</a>.</p>
-        </div>
       </div>
-    </section>
-    <section id="projects" class="next">
-      <div class="project-content container">
-        <div class="project-img">
-          <div class="img-clavier"><img src="./img/clavier.jpg" alt="coding"></div>
-          <div class="swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide img-left img-big"><img src="./img/sc-recette1.jpg" alt="App Recipe"></div>
-              <div class="swiper-slide img-right img-big"><img src="./img/sc-recette2.jpg" alt="App Recipe"></div>
-              <div class="swiper-slide img-center img-big"><img src="./img/sc-recette3.jpg" alt="App Recipe"></div>
-            </div>
-          </div>
-        </div>
-        <div class="project-text">
-          <p>I made this app to improve the search of recipes. My client has a lot of recipe cards in which it is very
-            difficult to find the recipe she's looking for.</br>But now with this app she can search for a recipe by
-            name and it gives her the right number to go to recipe cards.</p>
-        </div>
-      </div>
-    </section>
+    </div>
   </section>
   <!-- End project section -->
 

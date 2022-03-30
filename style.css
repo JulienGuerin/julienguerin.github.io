@@ -9,6 +9,7 @@
 html {
   scroll-behavior: smooth;
   /* scroll-snap-type: y proximity; */
+  --radius: 0.5rem;
 }
 body{
     font-family: 'Poppins';
@@ -45,6 +46,7 @@ h2 span{
 }
 a {
     text-decoration: none;
+    color: #1D6EDB;
 }
 a h3{
     color: #1f1f1f;
@@ -229,16 +231,18 @@ a h3{
     color: white;
     font-size: 2rem;
 }
-.cta {
+.cta, .link-to-site a{
     display: inline-block;
     padding: 10px 40px;
     color: white;
-    background-color: transparent;
     border: 2px solid  #1DDBA3;
-    border-radius: 1.1rem;
+    border-radius: var(--radius);
     font-size: 1.1rem;
     letter-spacing: .1rem;
     margin-top: 40px;
+}
+.cta {
+    background-color: transparent;
     transition: .3s ease;
     transition-property: background-color, color;
     animation: fadeInLeft 1.2s 1.3s ease backwards;
@@ -262,10 +266,10 @@ a h3{
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 img{
-    height: 100%;
+    display: block;
     width: 100%;
     object-fit: cover;
-    border-radius: 1.1rem;
+    border-radius: var(--radius);
 }
 .col-left{
     display: none;
@@ -289,7 +293,7 @@ img .copie{
     height: 100%;
     width: 100%;
     object-fit: cover;
-    border-radius: 1.1rem;
+    border-radius: var(--radius);
 }
 .text-container{
     position: absolute;
@@ -305,7 +309,7 @@ img .copie{
     width: 100%;
     height: 100%;
     background-color: #ededff;
-    border-radius: 1.1rem;
+    border-radius: var(--radius);
     z-index: -1;
 }
 /* Fin Section about */
@@ -314,20 +318,64 @@ img .copie{
 #all-projects{
     margin-bottom: 12vh;
 }
+
+.project-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    /* max-width: 600px; */
+    /* margin: 50px auto; */
+    /* padding: 25px; */
+}
+.project-tabs input[type="radio"] {
+    display: none;
+}
+.project-tabs label {
+    padding: 1.5rem 2.5rem;
+    background-color: white;
+    cursor: pointer;
+}
+
+.project-tabs .project-tab {
+    width: 100%;
+    padding-block: clamp(4rem, 8vw, 8rem);
+    background-color: #ededff;
+    border-radius: var(--radius);
+    order: 1;
+    display: none;
+}
+.project-tabs .project-tab h2 {
+    font-size: 3em;
+}
+
+.project-tabs input[type='radio']:checked + label + .project-tab {
+    display: block;
+}
+.project-tabs input[type='radio']:checked + .mobiletab + .project-tab {
+    border-top-left-radius: 0;
+}
+
+.project-tabs input[type="radio"]:checked + label {
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+    background-color: #ededff;
+    font-weight: bold;
+}
+
 #projects{
     display: flex;
     align-items: start;
     justify-content: center;
     overflow: visible;
 }
-.top-projects{
+/* .top-projects{
     margin-top: 12vh;
-}
+} */
 .next{
     padding-top: 20vh;
 }
 .project-title{
-    padding: 0 0 0 5vw;
+    margin-top: 12vh;
+    /* padding: 0 0 0 5vw; */
 }
 .project-content{
     display: grid;
@@ -356,10 +404,58 @@ img .copie{
 .swiper-container-3d .swiper-slide-shadow-bottom, .swiper-container-3d .swiper-slide-shadow-left, .swiper-container-3d .swiper-slide-shadow-right, .swiper-container-3d .swiper-slide-shadow-top {
     left: unset;
     width: 60%;
-    border-radius: 1.1rem;
+    border-radius: var(--radius);
 }
 .project-text{
     padding: 0 5vw;
+}
+
+.project-text h3, .webtab-img-one-child h3{
+    font-size: 2rem;
+    padding-bottom: min(calc(0.5rem + 1vw), 2rem);
+}
+
+.project-text a{
+    text-decoration: underline;
+}
+
+.webtab-img-one{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* flex-wrap: wrap; */
+    justify-items: center;
+    align-items: center;
+}
+
+.webtab-img-one:first-child{
+    margin-bottom: clamp(4rem, 8vw, 8rem);
+}
+.webtab-img-one-child{
+    width: 100%;
+    padding: 2rem 2rem 0;
+    text-align: center;
+}
+
+.webtab-img img{
+    max-width: 50%;
+    min-width: 220px;
+    /* border-radius: initial; */
+}
+
+.webtab-img-technos img{
+    display: inline;
+    max-width: 10%;
+    min-width: 40px;
+}
+
+.link-to-site a{
+    /* background-color:  #1DDBA3; */
+    color: #1f1f1f;
+    margin-top: min(calc((0.5rem + 1vw)*2), 2rem);
+}
+.link-to-site a:hover{
+    background-color:  #1DDBA3;
+    color: white;
 }
 /* Fin Section project */
 
@@ -384,7 +480,7 @@ img .copie{
 .contact-item {
     width: 200px;
     height: 200px;
-    border-radius: 1.1rem;
+    border-radius: var(--radius);
     padding: 30px;
     display: grid;
 	justify-content: center;
@@ -510,7 +606,7 @@ img .copie{
         top: 0;
         height: 100%;
         width: 70%;    
-        border-radius: 1.1rem;
+        border-radius: var(--radius);
         background-color: #000091;
         opacity: .5;
         z-index: 11;
@@ -540,6 +636,11 @@ img .copie{
     #footer h2{    
         font-size: 1.5rem;
         padding-bottom: 6%;
+    }
+/* Project section */
+    .webtab-img-one-child{
+        text-align: start;
+        padding: 0 2rem;
     }
 }
 /* big mobile view */
