@@ -432,7 +432,7 @@ img .copie{
 }
 
 .webtab-img-one:first-child{
-    margin-bottom: clamp(4rem, 8vw, 8rem);
+    margin-bottom: clamp(6rem, 12vw, 10rem);
 }
 .webtab-img-one-child{
     width: 27ch;
