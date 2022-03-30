@@ -427,13 +427,17 @@ img .copie{
     align-items: center;
 }
 
+.webtab-img-one > a{
+    display: contents;
+}
+
 .webtab-img-one:first-child{
     margin-bottom: clamp(4rem, 8vw, 8rem);
 }
 .webtab-img-one-child{
-    width: 100%;
+    width: 27ch;
     padding: 2rem 2rem 0;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .webtab-img img{
@@ -639,8 +643,9 @@ img .copie{
     }
 /* Project section */
     .webtab-img-one-child{
-        text-align: start;
-        padding: 0 2rem;
+        width: 100%;
+        /* text-align: start; */
+        padding: 0 4rem;
     }
 }
 /* big mobile view */
