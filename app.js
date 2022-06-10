@@ -23,3 +23,49 @@ menu_item.forEach((item) => {
 		mobile_menu.classList.toggle('active');
 	});
 });
+
+/***************************/
+/******* Effect Nav *******/
+/*************************/
+
+const navLink = document.querySelectorAll('[data-li]');
+const nav = document.querySelector('[data-nav]');
+
+function mousePositionForBeforeElement(e, element) {
+    let posX = e.offsetX;
+    let posY = e.offsetY;
+
+    element.style.setProperty("--x", posX + "px");
+    element.style.setProperty("--y", posY + "px");
+}
+
+navLink.forEach(li =>{
+    li.addEventListener('mouseenter', ()=>{
+
+        li.classList.add('hovering');
+        
+        li.addEventListener('mousemove', (e) => {
+            mousePositionForBeforeElement(e, li)
+        });
+    });
+
+    li.addEventListener('mouseleave', ()=>{
+
+        li.classList.remove('hovering');
+    })
+})
+
+nav.addEventListener('mouseenter', ()=>{
+    navLink.forEach(li =>{
+        li.classList.remove('hoveringDisplay');
+    })
+})
+nav.addEventListener('mouseleave', ()=>{
+    navLink.forEach(li =>{
+        li.classList.add('hoveringDisplay');
+    })
+})
+
+/*******************************/
+/******* End Effect Nav *******/
+/*****************************/
