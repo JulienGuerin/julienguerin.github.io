@@ -84,7 +84,6 @@ a h3{
 .nav-list{
     width: fit-content;
     width: -moz-fit-content;
-    height: 100%;
 }
 .nav-list ul {
     position: absolute;
@@ -632,6 +631,9 @@ img .copie{
     } */
     .hamburger{
         display: none;
+    }
+    #header .nav-list {
+        height: 100%;
     }
     #header .nav-list ul {
 		position: initial;
